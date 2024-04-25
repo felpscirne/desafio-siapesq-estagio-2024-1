@@ -1,44 +1,56 @@
-# desafio-siapesq-estagio-2024-1
+# Como executar este projeto
+Siga as instruções abaixo para executar este projeto em sua máquina local.
 
-Prazo: 2 semanas
-## Frontend
+## Pré-requisitos
+Você precisará ter os seguintes softwares pré-instalados em seu computador:
 
-Desenvolva uma aplicação web utilizando React e Leaflet que exiba um mapa interativo com marcadores de diferentes locais. Cada marcador deve exibir um popup contendo informações sobre o local, como nome, descrição e as coordenadas.
+-Python 3.8 ou superior
+-PostgreSQL
+-Venv
+-Pip
 
-### Requisitos:
+## Passos para a execução
+  ### Clone o repositório localmente
 
-* A aplicação deve ser desenvolvida utilizando React e Leaflet.
-* É necessário ter uma tela para cadastrar usuário e uma tela de login
-* O mapa só pode ser acessado aṕos o usuario fazer o login
-* O mapa deve ser centrado em uma localização inicial específica (Rio Grande)
-* Deve ser possivel adicionar e excluir um local
-* Ao clicar em um marcador, um popup deve ser exibido contendo informações sobre o local correspondente.
-* O código deve ser organizado e limpo, seguindo as boas práticas de desenvolvimento.
+  `git clone https://github.com/felpscirne/desafio-siapesq-estagio-2024-1.git`
 
-## Backend 
-  Desenvolva uma REST API em nodejs ou python que sirva os casos de uso da aplicação frontend
-### Requisitos:
-* Endpoints:
-  * Para cadastro de usuários(nome,email,senha)
-  * Para realizar login
-  * Utilize JWT para bloquear usuários não logados de acessarem as rotas protegidas
-  * **Rotas Protegidas por Token**:
-    * Para cadastro de local(nome,descrição,latitude,longitude)
-    * Para deletar local
-    * Para listar locais
-  * Utilize um banco de dados relacional(postgresql,mysql,etc)
+### Crie um ambiente virtual
 
-### Entrega
-* Faça uma fork desse projeto e criei uma branch com o seu nome e sobrenome(exemplo: patrick-souza)
+  Navegue até o diretório do projeto e crie um ambiente virtual usando o módulo venv do Python.
 
-* **Lembre-se de colocar um readme.md explicando como rodar o projeto** 
+### Ative o ambiente virtual
 
-* Siga o padrão do [**EXEMPLO**](https://github.com/PatrickFS18/desafio-siapesq-estagio-2024-1)
+Windows:
+`.\env\Scripts\activate`
+
+Linux ou MacOS:
+`source env/bin/activate`
+
+### Instale as dependências
+
+Instale as dependências do projeto usando o pip. As dependências estão listadas no arquivo `requirements.txt`.
+ 
   
-### Dúvidas
-Em caso de dúvida abra um issue no repositório do desafio e atribuia a @chipskein e/ou @PatrickFS18
+  `pip install -r requirements.txt`
 
-[exemplo-de-duvida](https://github.com/siapesq/desafio-siapesq-estagio-2024-1/issues/2)
+### Configure o banco de dados
+
+Configure a URL do banco de dados como uma variável de ambiente. Substitua `username`, `password` e `database` pelos detalhes do seu banco de dados PostgreSQL.
+
+Windows:
+`$env:DATABASE_URL="postgresql://username:password@localhost/database"`
+
+Linux ou MacOS:
+`export DATABASE_URL=postgresql://username:password@localhost/database`
+
+### Execute o projeto
+
+Finalmente, execute o projeto com o comando:
+`python app.py`
+
+## Com isso, você já pode acessar localhost:5000 ou testar via Postman
+
+
 
 
 
